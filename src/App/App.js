@@ -30,13 +30,13 @@ function App() {
             {/* </ Link> */}
             </section>
           </nav>
-          <section className="app-body">
+          {/* <section className="app-body">
             <p className="joke-card">This is a joke.</p>
             <div className="joke-btns">
               <button className="add-favorite">Favorite</button>
               <button className="next-joke">Next</button>
             </div>
-          </section>
+          </section> */}
           {/* <User />  */}
           {/* <Form /> */}
         </body>
