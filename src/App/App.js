@@ -16,13 +16,20 @@ class App extends Component {
     }
   }
 
-  componentDidMount = () => {
+  loadNewJoke = () => {
     getRandomJoke()
       .then(data => this.setState({ joke: data.joke }))
       .catch(data => this.setState({ error: data.status }))
   }
 
+  loadJoke = () => {
+    window.onload = () => {
+      this.loadNewJoke()
+    }
+  }
+
   render() {
+    this.loadJoke()
     return (
       //<Router>
         <div className="App">
@@ -52,7 +59,7 @@ class App extends Component {
               <p className="joke-card">{this.state.joke}</p>
               <div className="joke-btns">
                 <button className="add-favorite">Favorite</button>
-                <button className="next-joke">Next</button>
+                <button className="next-joke" onClick={this.loadNewJoke}>Next</button>
               </div>
             </section>
             {/* <User />  */}
