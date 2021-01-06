@@ -15,6 +15,7 @@
   width: 200px;
   margin: 20px;
   height: 60px;
+  text-shadow: 2px 2px #000000;
 }
 
 .user-favs {
@@ -34,5 +35,11 @@
   width: 350px;
   background-color: #fcf8ec;
   border-radius: 5px;
+  color: #000000;
   box-shadow: 1px 10px 20px 5px rgba(97,97,97,0.96);
+}
+
+.joke {
+  padding: 5px;
+  font-size: large;
 }

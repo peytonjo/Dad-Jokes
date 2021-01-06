@@ -50,6 +50,12 @@ body {
   background-color: $mossBlue;
   border-radius: 5px;
   color: $clouds;
+  transition: all .2s ease-in-out;
+}
+
+.nav-btns button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .joke-btns {
