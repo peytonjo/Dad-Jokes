@@ -1,4 +1,5 @@
 import './App.scss';
+import User from '../User/User'
 
 function App() {
   return (
@@ -11,14 +12,14 @@ function App() {
             <button>create your own!</button>
           </section>
         </nav>
-        <section className="app-body">
+        {/* <section className="app-body">
           <p>This is a joke.</p>
           <div className="joke-btns">
             <button>Favorite</button>
             <button>Next</button>
-          
           </div>
-        </section>
+        </section> */}
+        <User /> 
       </body>
     </div>
   );

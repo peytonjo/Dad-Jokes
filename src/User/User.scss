@@ -1,0 +1,38 @@
+@import '../colors.scss';
+
+.user-view {
+  justify-content: space-evenly;
+  background-color: $oceanBlue;
+  height: 100vh;
+  display: flex;
+  flex-flow: row;
+  // padding: 30px;
+  color: $clouds;
+  font-size: x-large;
+}
+
+.user-view h1 {
+  width: 200px;
+  margin: 20px;
+  height: 60px;
+}
+
+.user-favs {
+  width: 50vw;
+  display: table-column-group;
+  text-align: -webkit-center;
+}
+
+.users-jokes {
+  width: 50vw;
+  display: table-column-group;
+  text-align: -webkit-center;
+}
+
+.joke-card {
+  height: 200px;
+  width: 350px;
+  background-color: #fcf8ec;
+  border-radius: 5px;
+  box-shadow: 1px 10px 20px 5px rgba(97,97,97,0.96);
+}
