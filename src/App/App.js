@@ -38,41 +38,43 @@ class App extends Component {
               <NavBar />
             </nav>
             <Switch>
-            <Route
-              exact 
-              path='/'
-              render={ () => {
-                return (
-                  <section className="app-body">
-                    <p className="joke-card">{this.state.joke}</p>
-                    <div className="joke-btns">
-                    <button className="add-favorite">Favorite</button>
-                    <button className="next-joke" onClick={this.loadNewJoke}>Next</button>
-                    </div>
-                  </section>
-                )
-              }}
-            >
-            </Route>
-            <Route
-              exact 
-              path='/user-view'
-              render={ () => {
-                return(
-                  <User />
-                )
-              }}
-            >
-            </Route>
-            <Route
-              exact
-              path='/form-view'
-            >
-
-            </Route>
+              <Route
+                exact 
+                path='/'
+                render={ () => {
+                  return (
+                    <section className="app-body">
+                      <p className="joke-card">{this.state.joke}</p>
+                      <div className="joke-btns">
+                        <button className="add-favorite">Favorite</button>
+                        <button className="next-joke" onClick={this.loadNewJoke}>Next</button>
+                      </div>
+                    </section>
+                  )
+                }}
+              >
+              </Route>
+              <Route
+                exact 
+                path='/user-view'
+                render={ () => {
+                  return(
+                    <User />
+                  )
+                }}
+              >
+              </Route>
+              <Route
+                exact
+                path='/form-view'
+                render={ () => {
+                  return(
+                    <Form />
+                  )
+                }}
+              >
+              </Route>
             </Switch>
-            {/* <User />  */}
-            {/* <Form /> */}
           </main>
         </div>
     );

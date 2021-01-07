@@ -20,9 +20,9 @@ const NavBar = () => {
           />
         </button>
       </NavLink>
-      {/* <Link to="/Form"> */}
+      <NavLink to="/form-view">
         <button alt="new joke button">Add new joke</button>
-      {/* </ Link> */}
+      </ NavLink>
       </section>
     </nav>
   )
