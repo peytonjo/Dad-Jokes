@@ -1,5 +1,6 @@
 import userIcon from '../user.png'
 import './NavBar.scss';
+import { NavLink } from 'react-router-dom'
 
 const NavBar = () => {
   return(
@@ -9,7 +10,7 @@ const NavBar = () => {
         <h4>Need a good joke to embarrass your kids? We've got you covered!</h4>
       </div>
       <section className="nav-btns">
-      {/* <Link to="/User"> */}
+      <NavLink to="/User">
         <button alt="button">
           <img
           className="user-icon"
@@ -18,7 +19,7 @@ const NavBar = () => {
           role="button"
           />
         </button>
-      {/* </Link> */}
+      </NavLink>
       {/* <Link to="/Form"> */}
         <button alt="new joke button">Add new joke</button>
       {/* </ Link> */}

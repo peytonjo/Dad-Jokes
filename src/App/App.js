@@ -4,7 +4,7 @@ import userIcon from '../user.png'
 import User from '../User/User'
 import Form from '../Form/Form'
 import { NavBar } from '../NavBar/NavBar'
-import { Link, Router } from "react-router-dom"
+import { Route, Link, Router } from "react-router-dom"
 import { getRandomJoke } from '../ApiCalls.js'
 
 class App extends Component {
@@ -32,22 +32,30 @@ class App extends Component {
   render() {
     this.loadJoke()
     return (
-      //<Router>
         <div className="App">
           <body>
-            <NavBar />
-            <section className="app-body">
-              <p className="joke-card">{this.state.joke}</p>
-              <div className="joke-btns">
-                <button className="add-favorite">Favorite</button>
-                <button className="next-joke" onClick={this.loadNewJoke}>Next</button>
-              </div>
-            </section>
+            <Route
+              path='/'
+              render={ () => {
+                return (
+                  <section>
+                    <NavBar />
+                    <section className="app-body">
+                      <p className="joke-card">{this.state.joke}</p>
+                      <div className="joke-btns">
+                      <button className="add-favorite">Favorite</button>
+                      <button className="next-joke" onClick={this.loadNewJoke}>Next</button>
+                      </div>
+                    </section>
+                  </section>
+                )
+              }}
+            >
+            </Route>
             {/* <User />  */}
             {/* <Form /> */}
           </body>
         </div>
-      //</Router>
     );
   }
 }
