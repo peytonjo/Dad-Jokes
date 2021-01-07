@@ -2,7 +2,7 @@ import userIcon from '../user.png'
 import './NavBar.scss';
 import { NavLink } from 'react-router-dom'
 
-const NavBar = () => {
+const NavBar = (props) => {
   return(
     <nav className="nav-bar">
       <div className="title-phrase">
@@ -23,6 +23,11 @@ const NavBar = () => {
       <NavLink to="/form-view">
         <button alt="new joke button">Add new joke</button>
       </ NavLink>
+      {props.displayHomeButton &&
+      <NavLink to="/">
+        <button alt="home button">Return to Home</button>
+      </NavLink>
+      }
       </section>
     </nav>
   )

@@ -12,7 +12,8 @@ class App extends Component {
     this.state = {
       joke: '',
       id: '',
-      error: ''
+      error: '',
+      displayHomeButton: false
     }
   }
 
