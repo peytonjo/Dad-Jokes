@@ -29,13 +29,17 @@ class App extends Component {
     }
   }
 
+  homeButtonDisplayUpdater = (bool) => {
+    this.setState({ displayHomeButton: bool })
+  }
+
   render() {
     this.loadJoke()
     return (
         <div className="App">
           <main>
             <nav>
-              <NavBar />
+              <NavBar displayHomeButton={this.state.displayHomeButton}/>
             </nav>
             <Switch>
               <Route
@@ -59,7 +63,7 @@ class App extends Component {
                 path='/user-view'
                 render={ () => {
                   return(
-                    <User />
+                    <User homeButtonDisplayUpdater={this.homeButtonDisplayUpdater}/>
                   )
                 }}
               >
@@ -69,7 +73,7 @@ class App extends Component {
                 path='/form-view'
                 render={ () => {
                   return(
-                    <Form />
+                    <Form homeButtonDisplayUpdater={this.homeButtonDisplayUpdater}/>
                   )
                 }}
               >

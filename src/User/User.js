@@ -5,8 +5,8 @@ import './User.scss'
 
 
 class User extends Component {
- constructor() {
-   super();
+ constructor(props) {
+   super(props);
  }
 
   render() {
@@ -26,6 +26,10 @@ class User extends Component {
         </article>
       </section>
    )
+  }
+
+  componentDidMount() {
+    this.props.homeButtonDisplayUpdater(true)
   }
 }
 
