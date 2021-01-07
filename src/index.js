@@ -7,8 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 const router = <BrowserRouter><App /></BrowserRouter>
 
-ReactDOM.render(
-  router,
+ReactDOM.render( router,
   document.getElementById('root')
 );
 

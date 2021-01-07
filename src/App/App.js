@@ -1,6 +1,5 @@
 import './App.scss';
 import { Component } from 'react'
-import userIcon from '../user.png'
 import User from '../User/User'
 import Form from '../Form/Form'
 import { NavBar } from '../NavBar/NavBar'
@@ -39,7 +38,7 @@ class App extends Component {
             </nav>
             <Switch>
               <Route
-                exact 
+                exact
                 path='/'
                 render={ () => {
                   return (
@@ -55,7 +54,7 @@ class App extends Component {
               >
               </Route>
               <Route
-                exact 
+                exact
                 path='/user-view'
                 render={ () => {
                   return(
