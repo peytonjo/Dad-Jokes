@@ -1,0 +1,74 @@
+@import '../colors.scss';
+
+.App {
+  text-align: center;
+}
+
+.app-body {
+  background-color: $oceanBlue;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  font-family: monospace;
+  justify-content: space-evenly;
+}
+
+.page-title {
+  color: $mossBlue;
+  margin: 10px;
+}
+
+body {
+  margin: 0px;
+}
+
+.joke-btns {
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  justify-content: space-around;
+}
+
+.joke-btns button {
+  height: 60px;
+  width: 100px;
+}
+
+.next-joke {
+  height: 35px;
+  width: 400px;
+  background: $navBar;
+  border: none;
+  border-radius: 5px;
+  transition: all .2s ease-in-out;
+  color: $darkMoss;
+}
+
+.next-joke:hover {
+  background-color: $mossBlue;
+  color: $clouds;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.add-favorite {
+  height: 35px;
+  width: 400px;
+  background: $navBar;
+  border: none;
+  border-radius: 5px;
+  transition: all .2s ease-in-out;
+  color: $darkMoss;
+}
+
+.add-favorite:hover {
+  background-color: $mossBlue;
+  color: $clouds;
+  cursor: pointer;
+  transform: scale(1.1);
+}
