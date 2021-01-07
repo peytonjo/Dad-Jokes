@@ -10,7 +10,7 @@ const NavBar = () => {
         <h4>Need a good joke to embarrass your kids? We've got you covered!</h4>
       </div>
       <section className="nav-btns">
-      <NavLink to="/User">
+      <NavLink to="/user-view">
         <button alt="button">
           <img
           className="user-icon"

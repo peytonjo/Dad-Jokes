@@ -4,7 +4,7 @@ import userIcon from '../user.png'
 import User from '../User/User'
 import Form from '../Form/Form'
 import { NavBar } from '../NavBar/NavBar'
-import { Route, Link, Router } from "react-router-dom"
+import { Switch, Route, Link, Router } from "react-router-dom"
 import { getRandomJoke } from '../ApiCalls.js'
 
 class App extends Component {
@@ -33,28 +33,47 @@ class App extends Component {
     this.loadJoke()
     return (
         <div className="App">
-          <body>
+          <main>
+            <nav>
+              <NavBar />
+            </nav>
+            <Switch>
             <Route
+              exact 
               path='/'
               render={ () => {
                 return (
-                  <section>
-                    <NavBar />
-                    <section className="app-body">
-                      <p className="joke-card">{this.state.joke}</p>
-                      <div className="joke-btns">
-                      <button className="add-favorite">Favorite</button>
-                      <button className="next-joke" onClick={this.loadNewJoke}>Next</button>
-                      </div>
-                    </section>
+                  <section className="app-body">
+                    <p className="joke-card">{this.state.joke}</p>
+                    <div className="joke-btns">
+                    <button className="add-favorite">Favorite</button>
+                    <button className="next-joke" onClick={this.loadNewJoke}>Next</button>
+                    </div>
                   </section>
                 )
               }}
             >
             </Route>
+            <Route
+              exact 
+              path='/user-view'
+              render={ () => {
+                return(
+                  <User />
+                )
+              }}
+            >
+            </Route>
+            <Route
+              exact
+              path='/form-view'
+            >
+
+            </Route>
+            </Switch>
             {/* <User />  */}
             {/* <Form /> */}
-          </body>
+          </main>
         </div>
     );
   }
