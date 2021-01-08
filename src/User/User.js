@@ -12,13 +12,13 @@ class User extends Component {
   render() {
    return (
       <section className="user-view">
-        <article className="user-favs">
+        <article className="user-favs" alt="favorite jokes">
           <h1>Favorite Jokes</h1>
           <div className="joke-card">
             <p className="joke">"I don't trust stairs. They're always up to something."</p>
           </div>
         </article>
-        <article className="users-jokes">
+        <article className="users-jokes" alt="created jokes">
           <h1>Your Jokes</h1>
           <div className="joke-card">
             <p className="joke">"I don't trust stairs. They're always up to something."</p>
