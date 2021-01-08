@@ -18,6 +18,10 @@ class Form extends Component {
       </form>
     )
   }
+
+  componentDidMount() {
+    this.props.homeButtonDisplayUpdater(true)
+  }
 }
 
-export default Form; 
+export default Form;

@@ -1,11 +1,12 @@
 import './App.scss';
 import { Component } from 'react'
-import userIcon from '../user.png'
 import User from '../User/User'
 import Form from '../Form/Form'
+import RandomJoke from '../RandomJoke/RandomJoke'
 import { NavBar } from '../NavBar/NavBar'
 import { Switch, Route, Link, Router } from "react-router-dom"
 import { getRandomJoke } from '../ApiCalls.js'
+
 
 class App extends Component {
   constructor() {
@@ -13,7 +14,8 @@ class App extends Component {
     this.state = {
       joke: '',
       id: '',
-      error: ''
+      error: '',
+      displayHomeButton: false
     }
   }
 
@@ -29,37 +31,35 @@ class App extends Component {
     }
   }
 
+  homeButtonDisplayUpdater = (bool) => {
+    this.setState({ displayHomeButton: bool })
+  }
+
   render() {
     this.loadJoke()
     return (
         <div className="App">
           <main>
             <nav>
-              <NavBar />
+              <NavBar displayHomeButton={this.state.displayHomeButton}/>
             </nav>
             <Switch>
               <Route
-                exact 
+                exact
                 path='/'
                 render={ () => {
-                  return (
-                    <section className="app-body">
-                      <p className="joke-card">{this.state.joke}</p>
-                      <div className="joke-btns">
-                        <button className="add-favorite">Favorite</button>
-                        <button className="next-joke" onClick={this.loadNewJoke}>Next</button>
-                      </div>
-                    </section>
+                  return(
+                    <RandomJoke joke={this.state.joke} loadNewJoke={this.loadNewJoke} homeButtonDisplayUpdater={this.homeButtonDisplayUpdater}/>
                   )
                 }}
               >
               </Route>
               <Route
-                exact 
+                exact
                 path='/user-view'
                 render={ () => {
                   return(
-                    <User />
+                    <User homeButtonDisplayUpdater={this.homeButtonDisplayUpdater}/>
                   )
                 }}
               >
@@ -69,7 +69,7 @@ class App extends Component {
                 path='/form-view'
                 render={ () => {
                   return(
-                    <Form />
+                    <Form homeButtonDisplayUpdater={this.homeButtonDisplayUpdater}/>
                   )
                 }}
               >
