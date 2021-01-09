@@ -10,9 +10,11 @@ class CreatedCard extends Component {
 
   render() {
     return(
-      <div className="created-joke-card" id={props.joke.id}>
-        <p className="joke">{props.joke.joke}</p>
+      <div className="created-joke-card" id={this.props.joke.id}>
+        <p className="joke">{this.props.joke.joke}</p>
       </div>
     )
   }
 }
+
+export default CreatedCard;
