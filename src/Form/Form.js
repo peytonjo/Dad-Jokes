@@ -12,8 +12,6 @@ class Form extends Component {
   }
 
   handleChange = event => {
-    localStorage.setItem(event.target.name, event.target.value);
-
     this.setState({ [event.target.name]: event.target.value });
   }
 
@@ -31,13 +29,6 @@ class Form extends Component {
       oldJokesArray.push(newJoke)
       localStorage.setItem('jokes', JSON.stringify(oldJokesArray))
     }
-
-
-    // const newCard = (
-    //   <div className="created-joke-card" id={newJoke.joke}>
-    //     <p className="joke">{newJoke.joke}</p>
-    //   </div>)
-    // User.addNewJoke(newCard)
   } 
 
   render() {

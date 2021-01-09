@@ -8,6 +8,11 @@ class CreatedCard extends Component {
     super(props)
   }
 
-  
-
+  render() {
+    return(
+      <div className="created-joke-card" id={props.joke.id}>
+        <p className="joke">{props.joke.joke}</p>
+      </div>
+    )
+  }
 }
