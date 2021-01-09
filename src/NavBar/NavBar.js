@@ -33,4 +33,4 @@ const NavBar = (props) => {
   )
 }
 
-export { NavBar }
+export { NavBar } 
