@@ -11,12 +11,8 @@ class User extends Component {
    super(props);
  }
 
- addNewJoke = (newCard) => {
-  // insert newCard under the created jokes div
- }
-
  makeJokeCards = (jokes) => {
-  return jokes.map(joke => <CreatedCard joke={joke}/>)
+  return jokes.map(joke => <CreatedCard joke={joke} key={joke.id}/>)
  }
 
   render() {
@@ -24,9 +20,7 @@ class User extends Component {
       <section className="user-view">
         <article className="user-favs" alt="favorite jokes">
           <h1>Favorite Jokes</h1>
-          <div className="favorited-joke-card">
-            <p className="joke">"I don't trust stairs. They're always up to something."</p>
-          </div>
+          {this.makeJokeCards(JSON.parse(localStorage.getItem('favoriteJokes')))}
         </article>
         <article className="users-jokes" alt="created jokes">
           <h1>Your Jokes</h1>
