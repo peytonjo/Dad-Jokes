@@ -68,4 +68,20 @@ describe("App", () => {
 
     expect(screen.getByText("Next")).toBeInTheDocument()
   })
+
+  it("Should display the user page when the user icon button is pressed", async () => {
+    render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    );
+
+    const userIconBtn = screen.getByAltText("user icon")
+
+    fireEvent.click(userIconBtn)
+
+    const input = await waitFor(() => screen.getByText('Favorite Jokes'))
+
+    expect(input).toBeInTheDocument()
+  })
 });

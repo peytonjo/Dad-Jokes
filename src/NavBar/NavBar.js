@@ -11,7 +11,7 @@ const NavBar = (props) => {
       </div>
       <section className="nav-btns">
       <NavLink to="/user-view">
-        <button alt="button">
+        <button role="button">
           <img
           className="user-icon"
           alt="user icon"
@@ -33,4 +33,4 @@ const NavBar = (props) => {
   )
 }
 
-export { NavBar }
+export { NavBar } 
