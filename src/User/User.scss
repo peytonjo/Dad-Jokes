@@ -29,7 +29,19 @@
   text-align: -webkit-center;
 }
 
-.joke-card {
+.favorited-joke-card {
+  height: 190px;
+  width: 374px;
+  background-color: #fcf8ec;
+  border-radius: 5px;
+  color: #000000;
+  display: flex;
+  box-shadow: 1px 10px 20px 5px rgba(97, 97, 97, 0.96);
+  align-items: center;
+  justify-content: center;
+}
+
+.created-joke-card {
   height: 190px;
   width: 374px;
   background-color: #fcf8ec;
