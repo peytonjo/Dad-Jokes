@@ -1,7 +1,6 @@
 import React from 'react'
 import RandomJoke from './RandomJoke'
 import '@testing-library/jest-dom'
-import { MemoryRouter } from 'react-router-dom'
 import { screen, render, fireEvent } from '@testing-library/react'
 
 const joke = {
@@ -22,6 +21,12 @@ describe("RandomJoke", () => {
     expect(screen.getByText("Next")).toBeInTheDocument()
   })
 
+  it("Should call the display updated on load", () => {
+    render(<RandomJoke joke={joke.joke} homeButtonDisplayUpdater={mockHomeButtonDisplayUpdater}/>)
+
+    expect(mockHomeButtonDisplayUpdater).toHaveBeenCalled()
+  })
+
   it("Should call the newJoke function when the Next button is clicked", () => {
     render(<RandomJoke joke={joke.joke} loadNewJoke={mockLoadNewJoke} homeButtonDisplayUpdater={mockHomeButtonDisplayUpdater}/>)
 
@@ -29,6 +34,14 @@ describe("RandomJoke", () => {
     fireEvent.click(nextButton)
 
     expect(mockLoadNewJoke).toHaveBeenCalled()
+  })
+
+  it("Should display an error message if there is no joke", () => {
+    render(<RandomJoke  loadNewJoke={mockLoadNewJoke} homeButtonDisplayUpdater={mockHomeButtonDisplayUpdater}/>)
+
+    const errorMessage = screen.getByText("Couldn't reach the jokes compendium, try again later")
+
+    expect(errorMessage).toBeInTheDocument()
   })
 })
 
