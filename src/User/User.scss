@@ -23,6 +23,10 @@
   text-align: -webkit-center;
 }
 
+.user-favs {
+  @include user-favs;
+}
+
 .users-jokes {
   @include user-favs;
 }
@@ -37,6 +41,10 @@
   box-shadow: 1px 10px 20px 5px rgba(97, 97, 97, 0.96);
   align-items: center;
   justify-content: center;
+}
+
+.joke-card {
+  @include joke-card;
 }
 
 .favorited-joke-card {

@@ -7,7 +7,7 @@ const NavBar = (props) => {
     <nav className="nav-bar">
       <div className="title-phrase">
         <h1 className="page-title">Cringy Dad Jokes</h1>
-        <h4>Need a good joke to embarrass your kids? We've got you covered!</h4>
+        <p>Need a good joke to embarrass your kids? We've got you covered!</p>
       </div>
       <section className="nav-btns">
         <NavLink to="/user-view">
