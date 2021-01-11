@@ -1,6 +1,6 @@
 import React from 'react'
+import { getUserJokes} from '../localStorage'
 import { Component } from 'react'
-import User from '../User/User'
 import './Form.scss'
 
 class Form extends Component {
@@ -29,7 +29,7 @@ class Form extends Component {
     if (!JSON.parse(localStorage.getItem('jokes'))) {
       localStorage.setItem('jokes', JSON.stringify([newJoke]))
     } else {
-      const oldJokesArray = JSON.parse(localStorage.getItem('jokes'))
+      const oldJokesArray = getUserJokes()
       oldJokesArray.push(newJoke)
       localStorage.setItem('jokes', JSON.stringify(oldJokesArray))
     }
