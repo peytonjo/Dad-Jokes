@@ -1,5 +1,5 @@
 import React from 'react'
-import { screen, render, fireEvent } from '@testing-library/react'
+import { screen, render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Form from './Form.js'
 
@@ -10,7 +10,7 @@ describe('Form', () => {
   it('Should render an input box', () => {
     render(<Form homeButtonDisplayUpdater={mockHomeButtonDisplayUpdater}/>)
 
-    const inputArea = screen.getByAltText('joke input box')
+    const inputArea = screen.getByPlaceholderText("Example: How do you get a squirrel to like you? Act like a nut.")
 
     expect(inputArea).toBeInTheDocument()
   })
@@ -26,7 +26,7 @@ describe('Form', () => {
   it('Input field should reflect what is typed into it', () => {
     render(<Form homeButtonDisplayUpdater={mockHomeButtonDisplayUpdater}/>)
 
-    const inputArea = screen.getByAltText('joke input box')
+    const inputArea = screen.getByPlaceholderText("Example: How do you get a squirrel to like you? Act like a nut.")
 
     userEvent.type(inputArea, 'Jo mamma')
 
