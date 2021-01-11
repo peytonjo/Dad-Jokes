@@ -1,8 +1,7 @@
 import React from 'react'
 import { Component } from 'react'
-import Form from '../Form/Form'
+import { getFavoriteJokes, getUserJokes } from '../localStorage'
 import CreatedCard from '../CreatedCard/CreatedCard'
-import { Link } from 'react-router-dom'
 import './User.scss'
 
 
@@ -20,11 +19,11 @@ class User extends Component {
       <section className="user-view">
         <article className="user-favs" alt="favorite jokes">
           <h1>Favorite Jokes</h1>
-          {this.makeJokeCards(JSON.parse(localStorage.getItem('favoriteJokes')))}
+          {getFavoriteJokes() ? this.makeJokeCards(getFavoriteJokes()) : <p>This is where my favorite jokes would go... IF I HAD ANY</p>}
         </article>
         <article className="users-jokes" alt="created jokes">
           <h1>Your Jokes</h1>
-          {this.makeJokeCards(JSON.parse(localStorage.getItem('jokes')))}
+          {getUserJokes() ? this.makeJokeCards(getUserJokes()) : <p>This is where my jokes would go... IF I HAD ANY</p>}
         </article>
       </section>
    )
