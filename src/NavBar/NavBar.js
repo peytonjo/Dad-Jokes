@@ -11,7 +11,7 @@ const NavBar = (props) => {
       </div>
       <section className="nav-btns">
         <NavLink to="/user-view">
-          <button role="button">
+          <button>
             <img
               className="user-icon"
               alt="user icon"
