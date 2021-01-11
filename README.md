@@ -26,8 +26,8 @@ The complete project spec and rubric can be found [here]().
 
   
 ## Programming Languages and Technology Used:
-* `JavaScript` using the `React Library` 
-* `React testing Library` and `Jest` 
+* `React Library` 
+* `React testing Library`, `Jest`, and `Cypress`
 * `SCSS`
 * `NPM` to compile the application and run tests
 
