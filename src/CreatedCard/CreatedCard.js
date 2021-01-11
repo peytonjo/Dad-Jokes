@@ -9,7 +9,7 @@ class CreatedCard extends Component {
   }
 
   render() {
-    return(
+    return (
       <div className="created-joke-card" id={this.props.joke.id}>
         {!this.props.joke.joke && <p>Sorry, you're not funny</p>}
         {this.props.joke.joke && <p className="joke">{this.props.joke.joke}</p>}

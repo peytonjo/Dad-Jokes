@@ -4,7 +4,7 @@ const getRandomJoke = () => {
       "Accept": "application/json"
     }
   })
-  .then(response => response.json())
+    .then(response => response.json())
 }
 
 export { getRandomJoke }

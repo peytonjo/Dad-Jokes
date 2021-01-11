@@ -6,16 +6,16 @@ import './User.scss'
 
 
 class User extends Component {
- constructor(props) {
-   super(props);
- }
+  constructor(props) {
+    super(props);
+  }
 
- makeJokeCards = (jokes) => {
-  return jokes.map(joke => <CreatedCard joke={joke} key={joke.id}/>)
- }
+  makeJokeCards = (jokes) => {
+    return jokes.map(joke => <CreatedCard joke={joke} key={joke.id} />)
+  }
 
   render() {
-   return (
+    return (
       <section className="user-view">
         <article className="user-favs" alt="favorite jokes">
           <h1>Favorite Jokes</h1>
@@ -26,7 +26,7 @@ class User extends Component {
           {getUserJokes() ? this.makeJokeCards(getUserJokes()) : <p>This is where my jokes would go... IF I HAD ANY</p>}
         </article>
       </section>
-   )
+    )
   }
 
   componentDidMount() {

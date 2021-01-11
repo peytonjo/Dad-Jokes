@@ -38,45 +38,45 @@ class App extends Component {
   render() {
     this.loadJoke()
     return (
-        <div className="App">
-          <main>
-            <nav>
-              <NavBar displayHomeButton={this.state.displayHomeButton}/>
-            </nav>
-            <Switch>
-              <Route
-                exact
-                path='/'
-                render={ () => {
-                  return(
-                    <RandomJoke joke={this.state.joke} loadNewJoke={this.loadNewJoke} homeButtonDisplayUpdater={this.homeButtonDisplayUpdater}/>
-                  )
-                }}
-              >
-              </Route>
-              <Route
-                exact
-                path='/user-view'
-                render={ () => {
-                  return(
-                    <User homeButtonDisplayUpdater={this.homeButtonDisplayUpdater}/>
-                  )
-                }}
-              >
-              </Route>
-              <Route
-                exact
-                path='/form-view'
-                render={ () => {
-                  return(
-                    <Form homeButtonDisplayUpdater={this.homeButtonDisplayUpdater}/>
-                  )
-                }}
-              >
-              </Route>
-            </Switch>
-          </main>
-        </div>
+      <div className="App">
+        <main>
+          <nav>
+            <NavBar displayHomeButton={this.state.displayHomeButton} />
+          </nav>
+          <Switch>
+            <Route
+              exact
+              path='/'
+              render={() => {
+                return (
+                  <RandomJoke joke={this.state.joke} loadNewJoke={this.loadNewJoke} homeButtonDisplayUpdater={this.homeButtonDisplayUpdater} />
+                )
+              }}
+            >
+            </Route>
+            <Route
+              exact
+              path='/user-view'
+              render={() => {
+                return (
+                  <User homeButtonDisplayUpdater={this.homeButtonDisplayUpdater} />
+                )
+              }}
+            >
+            </Route>
+            <Route
+              exact
+              path='/form-view'
+              render={() => {
+                return (
+                  <Form homeButtonDisplayUpdater={this.homeButtonDisplayUpdater} />
+                )
+              }}
+            >
+            </Route>
+          </Switch>
+        </main>
+      </div>
     );
   }
 }
