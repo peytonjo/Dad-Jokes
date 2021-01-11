@@ -39,7 +39,7 @@ body {
   width: 100px;
 }
 
-.next-joke {
+@mixin next-joke {
   height: 35px;
   width: 400px;
   background: $navBar;
@@ -47,28 +47,23 @@ body {
   border-radius: 5px;
   transition: all .2s ease-in-out;
   color: $darkMoss;
+}
+
+@mixin button-hover {
+  background-color: $mossBlue;
+  color: $clouds;
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .next-joke:hover {
-  background-color: $mossBlue;
-  color: $clouds;
-  cursor: pointer;
-  transform: scale(1.1);
+@include button-hover;
 }
 
 .add-favorite {
-  height: 35px;
-  width: 400px;
-  background: $navBar;
-  border: none;
-  border-radius: 5px;
-  transition: all .2s ease-in-out;
-  color: $darkMoss;
+@include next-joke;
 }
 
 .add-favorite:hover {
-  background-color: $mossBlue;
-  color: $clouds;
-  cursor: pointer;
-  transform: scale(1.1);
+ @include button-hover;
 }
