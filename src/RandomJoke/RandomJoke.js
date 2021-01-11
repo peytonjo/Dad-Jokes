@@ -20,14 +20,16 @@ class RandomJoke extends Component {
       oldJokesArray.push(newJoke)
       localStorage.setItem('favoriteJokes', JSON.stringify(oldJokesArray))
     }
-  } 
+  }
 
   render() {
     return (
       <section className="app-body">
-        <p className="joke-card">{this.props.joke}</p>
+        <p className="joke-card">
+          {this.props.joke ? this.props.joke : "Couldn't reach the jokes compendium, try again later"}
+        </p>
         <div className="joke-btns">
-          <button className="add-favorite" onClick={this.addFavoritedJoke}>Favorite</button>
+          {this.props.joke && <button className="add-favorite" onClick={this.addFavoritedJoke}>Favorite</button>}
           <button className="next-joke" onClick={this.props.loadNewJoke}>Next</button>
         </div>
       </section>

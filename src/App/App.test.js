@@ -16,7 +16,7 @@ const joke2 = {
   "status": 200,
 };
 
-describe("App", () => {
+describe.skip("App", () => {
   beforeEach(() => {
     getRandomJoke.mockResolvedValueOnce(joke1);
     // getRandomJoke.mockResolvedValueOnce(joke2);
