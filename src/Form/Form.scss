@@ -38,3 +38,9 @@ textarea {
   cursor: pointer;
   transform: scale(1.1);
 }
+
+.form-submit:disabled {
+  background: $navBar;
+  transform: none;
+  color: $darkMoss;
+}
