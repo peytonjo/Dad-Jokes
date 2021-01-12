@@ -36,7 +36,7 @@ The complete project spec and rubric can be found [here](https://frontend.turing
 ## Learning Goals
 * Firm understanding of how to use Cypress 
 * Become more comfortable with 'best use practices'
-* gain a deeper understanding of React and React Router 
+* Gain a deeper understanding of React and React Router 
 
 ## Application
 Should:
