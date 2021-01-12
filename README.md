@@ -20,14 +20,13 @@ The complete project spec and rubric can be found [here](https://frontend.turing
  *The user (Ideally a dad or enjoyer of 'dad jokes' who needs help with remembering a large backlog of corny setups and punchlines), should be immediately greeted by a 'dad joke,' randomly acquired from an API.
 * If the API is not available, the user should see an error message
 * If there is a joke, the user should be able to click the 'favorite' button to save it
-*The user should be able to click on the 'User Icon' button to go to their personal joke page
-*The user should be able to click on the 'Add a joke' button to go to the 'New joke' form
-*The user should not be able to click the 'submit' button on the 'New Joke' form unless there is something added to the Input feild
-New
-*After the user inputs a joke and clicks 'submit,' they should then be able to see their added joke when navigating to the personal joke page
-*After the user clicks 'favorite' on the home screen, they should be able to see the favorited joke on their personal joke page
-*The 'Return to Home' button should only appear when the user is not on the home page
-*The user should be routed to the 'Random Joke' page after clicking the 'Return to Home' button
+* The user should be able to click on the 'User Icon' button to go to their personal joke page
+* The user should be able to click on the 'Add a joke' button to go to the 'New joke' form
+* The user should not be able to click the 'submit' button on the 'New Joke' form unless there is something added to the Input field
+* After the user inputs a joke and clicks 'submit,' they should then be able to see their added joke when navigating to the personal joke page
+* After the user clicks 'favorite' on the home screen, they should be able to see the favorited joke on their personal joke page
+* The 'Return to Home' button should only appear when the user is not on the home page
+* The user should be routed to the 'Random Joke' page after clicking the 'Return to Home' button
 
 
 
