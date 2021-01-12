@@ -1,5 +1,6 @@
 # Stretch Technology Group Project
-This project is centered around thinking of a distinct problem and creating an application to solve the problem while learning a new technology. The main objective is not to have a fully functional application but instead use it as practice for learning Cypress while creating a minimal viable product. 
+The primary goal of this 'stretch' project was to engage in learning a new technology that was not directly taught to us in our classes at Turing. We were directed to choose a limited MVP, set our own learning goals, iterations, and deadlines. We needed to plan carefully, push ourselves, step out of our comfort zones, and self-direct. The project was built using React and React Router, and tested using React Testing Library, Jest, and Cypress.
+The MVP of our project is relatively simple, testing was our main focus. None of us had any previous knowledge of the Cypress testing framework, and by the end of the project we were able to construct a robust testing suite integrating Cypress for integration tests.
 
 
 ## Project Description:
