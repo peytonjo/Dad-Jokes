@@ -3,9 +3,7 @@ This project is centered around thinking of a distinct problem and creating an a
 
 
 ## Project Description:
-
-
-The complete project spec and rubric can be found [here]().
+The complete project spec and rubric can be found [here](https://frontend.turing.io/projects/module-3/stretch.html).
 
 ## Setup Instructions:
   1. `Fork` [this repository](https://github.com/peytonjo/Dad-Jokes).
@@ -20,6 +18,11 @@ The complete project spec and rubric can be found [here]().
  
   
 ## The Working Application
+Should:
+* Have a home page that displays a random joke
+* Have a nav bar with buttons to see the form page and user page
+* Form page should have a working form that takes inputs and creates a card
+* User page should display all user created cards and users favorited cards
 
 
 ## Learning Goals:
