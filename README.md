@@ -35,8 +35,7 @@ The complete project spec and rubric can be found [here]().
 ### Creators/Owners:
 * [Caleb](https://github.com/)
 * [Peyton Jones](https://github.com/peytonjo)
-* [Jordon](https://github.com/)
+* [Jordon Smith](https://github.com/jdxsmith)
 ### Project Managers:
 * [Leta Keane](https://github.com/letakeane)
 * [Will Mitchell](https://github.com/wvmitchell)
-
