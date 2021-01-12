@@ -21,6 +21,8 @@ The complete project spec and rubric can be found [here]().
 
 
 ## Learning Goals:
+* Firm understanding of how to use Cypress 
+* Become more comfortable 'with best use practices'
 
 ### Understand:
 
