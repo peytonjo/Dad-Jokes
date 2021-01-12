@@ -10,9 +10,11 @@ The complete project spec and rubric can be found [here](https://frontend.turing
   1. `Clone` it down to your local machine with `git clone <your SSH Key>`.
   1. Change into your directory with 
   1. Run `npm install` to compile the React application.
+  1. Run `npm install cypress --save-dev` to install Cypress.
   1. Run `npm start` to see the app running locally.
   1. Run `<your text editor> .` to see the code in your text editor.
   1. Run `npm test` to see all of the tests running in your Terminal.
+  1. Run `npx cypress open` to run all Cypress test.
 
 ### User Experience:
  
@@ -27,7 +29,8 @@ Should:
 
 ## Learning Goals:
 * Firm understanding of how to use Cypress 
-* Become more comfortable 'with best use practices'
+* Become more comfortable with 'best use practices'
+* gain a deeper understanding of React and React Router 
 
 ### Understand:
 
