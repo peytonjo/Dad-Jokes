@@ -1,4 +1,6 @@
-# Stretch Technology Group Project 
+# Stretch Technology Group Project
+This project is centered around thinking of a distinct problem and creating an application to solve the problem while learning a new technology. The main objective is not to have a fully functional application but instead use it as practice for learning Cypress while creating a minimal viable product. 
+
 
 ## Project Description:
 
@@ -35,7 +37,7 @@ The complete project spec and rubric can be found [here]().
 
 ## Contributors:
 ### Creators/Owners:
-* [Caleb](https://github.com/)
+* [Caleb Cyphers](https://github.com/calebcyphers)
 * [Peyton Jones](https://github.com/peytonjo)
 * [Jordon Smith](https://github.com/jdxsmith)
 ### Project Managers:
