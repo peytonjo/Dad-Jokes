@@ -8,7 +8,7 @@ The complete project spec and rubric can be found [here]().
 ## Setup Instructions:
   1. `Fork` [this repository](https://github.com/peytonjo/Dad-Jokes).
   1. `Clone` it down to your local machine with `git clone <your SSH Key>`.
-  1. Change into your directory with `cd rotten-tomatillos`.
+  1. Change into your directory with 
   1. Run `npm install` to compile the React application.
   1. Run `npm start` to see the app running locally.
   1. Run `<your text editor> .` to see the code in your text editor.
