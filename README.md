@@ -31,11 +31,7 @@ The complete project spec and rubric can be found [here](https://frontend.turing
 
   
 ## The Working Application
-Should:
-* Have a home page that displays a random joke
-* Have a nav bar with buttons to see the form page and user page
-* Form page should have a working form that takes inputs and creates a card
-* User page should display all user created cards and users favorited cards
+
 
 
 ## Learning Goals:
@@ -43,7 +39,12 @@ Should:
 * Become more comfortable with 'best use practices'
 * gain a deeper understanding of React and React Router 
 
-### Understand:
+### Application:
+Should:
+* Have a home page that displays a random joke
+* Have a nav bar with buttons to see the form page and user page
+* Form page should have a working form that takes inputs and creates a card
+* User page should display all user created cards and users favorited cards
 
   
 ## Programming Languages and Technology Used:
