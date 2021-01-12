@@ -17,7 +17,7 @@ The complete project spec and rubric can be found [here](https://frontend.turing
   1. Run `npx cypress open` to run all Cypress test.
 
 ### User Experience:
- *The user (Ideally a dad or enjoyer of 'dad jokes' who needs help with remembering a large backlog of corny setups and punchlines), should be immediately greeted by a 'dad joke,' randomly acquired from an API.
+ * The user (Ideally a dad or enjoyer of 'dad jokes' who needs help with remembering a large backlog of corny setups and punchlines), should be immediately greeted by a 'dad joke,' randomly acquired from an API.
 * If the API is not available, the user should see an error message
 * If there is a joke, the user should be able to click the 'favorite' button to save it
 * The user should be able to click on the 'User Icon' button to go to their personal joke page
@@ -27,14 +27,6 @@ The complete project spec and rubric can be found [here](https://frontend.turing
 * After the user clicks 'favorite' on the home screen, they should be able to see the favorited joke on their personal joke page
 * The 'Return to Home' button should only appear when the user is not on the home page
 * The user should be routed to the 'Random Joke' page after clicking the 'Return to Home' button
-
-
-
-
-
-
-
-
 
   
 ## The Working Application
