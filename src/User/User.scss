@@ -14,57 +14,47 @@
   width: 200px;
   margin: 20px;
   height: 60px;
-  text-shadow: 2px 2px #000000;
+  text-shadow: 2px 2px $black;
+}
+
+@mixin user-favs {
+  width: 50vw;
+  display: table-column-group;
+  text-align: -webkit-center;
 }
 
 .user-favs {
-  width: 50vw;
-  display: table-column-group;
-  text-align: -webkit-center;
+  @include user-favs;
 }
 
 .users-jokes {
-  width: 50vw;
-  display: table-column-group;
-  text-align: -webkit-center;
+  @include user-favs;
+}
+
+
+@mixin joke-card {
+  height: 190px;
+  width: 374px;
+  background-color: $white;
+  border-radius: 5px;
+  color: $black;
+  display: flex;
+  box-shadow: 1px 10px 20px 5px rgba(97, 97, 97, 0.96);
+  align-items: center;
+  justify-content: center;
 }
 
 .joke-card {
-  height: 190px;
-  width: 374px;
-  background-color: #fcf8ec;
-  border-radius: 5px;
-  color: #000000;
-  display: flex;
-  box-shadow: 1px 10px 20px 5px rgba(97, 97, 97, 0.96);
-  align-items: center;
-  justify-content: center;
+  @include joke-card;
 }
 
 .favorited-joke-card {
-  height: 190px;
-  width: 374px;
-  background-color: #fcf8ec;
-  border-radius: 5px;
-  color: #000000;
-  display: flex;
-  box-shadow: 1px 10px 20px 5px rgba(97, 97, 97, 0.96);
-  align-items: center;
-  justify-content: center;
+  @include joke-card;
   margin-bottom: 30px;
 }
 
 .created-joke-card {
-  height: 190px;
-  width: 374px;
-  background-color: #fcf8ec;
-  border-radius: 5px;
-  color: #000000;
-  display: flex;
-  box-shadow: 1px 10px 20px 5px rgba(97, 97, 97, 0.96);
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
+  @include joke-card; 
 }
 
 .joke {

@@ -10,7 +10,7 @@
   padding: 30px;
 }
 
-input {
+textarea {
   height: 100px;
   width: 400px;
   margin: 25px;
@@ -19,7 +19,7 @@ input {
   height: 80px;
   border: none;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: $white;
 }
 
 .form-submit {
@@ -37,4 +37,10 @@ input {
   color: $clouds;
   cursor: pointer;
   transform: scale(1.1);
+}
+
+.form-submit:disabled {
+  background: $navBar;
+  transform: none;
+  color: $darkMoss;
 }

@@ -1,13 +1,13 @@
 import React from 'react'
+import { getUserJokes} from '../localStorage'
 import { Component } from 'react'
-import User from '../User/User'
 import './Form.scss'
 
 class Form extends Component {
   constructor() {
     super()
     this.state = {
-      input: '',
+      input: ''
     }
   }
 
@@ -29,7 +29,7 @@ class Form extends Component {
     if (!JSON.parse(localStorage.getItem('jokes'))) {
       localStorage.setItem('jokes', JSON.stringify([newJoke]))
     } else {
-      const oldJokesArray = JSON.parse(localStorage.getItem('jokes'))
+      const oldJokesArray = getUserJokes()
       oldJokesArray.push(newJoke)
       localStorage.setItem('jokes', JSON.stringify(oldJokesArray))
     }
@@ -40,7 +40,7 @@ class Form extends Component {
     return (
       <form className="joke-form" alt="form">
         <textarea type='text-area' name='input' placeholder="Example: How do you get a squirrel to like you? Act like a nut." value={this.state.input} alt="joke input box" onChange={event => this.handleChange(event)}></textarea>
-        <button type="submit" value="Submit" className="form-submit" alt="form submit button" onClick={event => this.makeNewJoke(event)}>Submit</button>
+        {this.state.input ? <button type="submit" value="Submit" className="form-submit" alt="form submit button" onClick={event => this.makeNewJoke(event)}>Submit</button> : <button type="submit" value="Submit" className="form-submit" disabled alt="form submit button" onClick={event => this.makeNewJoke(event)}>Submit</button>}
       </form>
     )
   }
