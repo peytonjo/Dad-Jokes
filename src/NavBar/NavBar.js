@@ -1,6 +1,7 @@
-import userIcon from '../user.png'
-import './NavBar.scss';
-import { NavLink } from 'react-router-dom'
+import userIcon from "../user.png";
+import "./NavBar.scss";
+import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 
 const NavBar = (props) => {
   return (
@@ -22,15 +23,19 @@ const NavBar = (props) => {
         </NavLink>
         <NavLink to="/form-view">
           <button alt="new joke button">Add new joke</button>
-        </ NavLink>
-        {props.displayHomeButton &&
+        </NavLink>
+        {props.displayHomeButton && (
           <NavLink to="/">
             <button alt="home button">Return to Home</button>
           </NavLink>
-        }
+        )}
       </section>
     </nav>
-  )
-}
+  );
+};
 
-export { NavBar } 
+export { NavBar };
+
+NavBar.propTypes = {
+  displayHomeButton: PropTypes.bool
+}
