@@ -1,42 +1,41 @@
-import './App.scss';
-import { Component } from 'react'
-import User from '../User/User'
-import Form from '../Form/Form'
-import RandomJoke from '../RandomJoke/RandomJoke'
-import { NavBar } from '../NavBar/NavBar'
-import { Switch, Route, Link, Router } from "react-router-dom"
-import { getRandomJoke } from '../ApiCalls.js'
-
+import "./App.scss";
+import { Component } from "react";
+import User from "../User/User";
+import Form from "../Form/Form";
+import RandomJoke from "../RandomJoke/RandomJoke";
+import { NavBar } from "../NavBar/NavBar";
+import { Switch, Route } from "react-router-dom";
+import { getRandomJoke } from "../ApiCalls.js";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      joke: '',
-      id: '',
-      error: '',
-      displayHomeButton: false
-    }
+      joke: "",
+      id: "",
+      error: "",
+      displayHomeButton: false,
+    };
   }
 
   loadNewJoke = () => {
     getRandomJoke()
-      .then(data => this.setState({ joke: data.joke }))
-      .catch(data => this.setState({ error: data.status }))
-  }
+      .then((data) => this.setState({ joke: data.joke }))
+      .catch((data) => this.setState({ error: data.status }));
+  };
 
   loadJoke = () => {
     window.onload = () => {
-      this.loadNewJoke()
-    }
-  }
+      this.loadNewJoke();
+    };
+  };
 
   homeButtonDisplayUpdater = (bool) => {
-    this.setState({ displayHomeButton: bool })
-  }
+    this.setState({ displayHomeButton: bool });
+  };
 
   render() {
-    this.loadJoke()
+    this.loadJoke();
     return (
       <div className="App">
         <main>
@@ -46,34 +45,39 @@ class App extends Component {
           <Switch>
             <Route
               exact
-              path='/'
+              path="/"
               render={() => {
                 return (
-                  <RandomJoke joke={this.state.joke} loadNewJoke={this.loadNewJoke} homeButtonDisplayUpdater={this.homeButtonDisplayUpdater} />
-                )
+                  <RandomJoke
+                    joke={this.state.joke}
+                    loadNewJoke={this.loadNewJoke}
+                    homeButtonDisplayUpdater={this.homeButtonDisplayUpdater}
+                  />
+                );
               }}
-            >
-            </Route>
+            ></Route>
             <Route
               exact
-              path='/user-view'
+              path="/user-view"
               render={() => {
                 return (
-                  <User homeButtonDisplayUpdater={this.homeButtonDisplayUpdater} />
-                )
+                  <User
+                    homeButtonDisplayUpdater={this.homeButtonDisplayUpdater}
+                  />
+                );
               }}
-            >
-            </Route>
+            ></Route>
             <Route
               exact
-              path='/form-view'
+              path="/form-view"
               render={() => {
                 return (
-                  <Form homeButtonDisplayUpdater={this.homeButtonDisplayUpdater} />
-                )
+                  <Form
+                    homeButtonDisplayUpdater={this.homeButtonDisplayUpdater}
+                  />
+                );
               }}
-            >
-            </Route>
+            ></Route>
           </Switch>
         </main>
       </div>

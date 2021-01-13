@@ -1,52 +1,80 @@
-import React from 'react'
-import { getUserJokes} from '../localStorage'
-import { Component } from 'react'
-import './Form.scss'
+import React from "react";
+import { getUserJokes } from "../localStorage";
+import { Component } from "react";
+import "./Form.scss";
 
 class Form extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
-      input: ''
-    }
+      input: "",
+    };
   }
 
   clearInputs = () => {
-    this.setState({ input: '' })
-  }
+    this.setState({ input: "" });
+  };
 
-  handleChange = event => {
+  handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
-  }
+  };
 
-  makeNewJoke = event => {
+  makeNewJoke = (event) => {
     event.preventDefault();
     const newJoke = {
       id: Date.now(),
       joke: this.state.input,
-      status: 200
-    }
-    if (!JSON.parse(localStorage.getItem('jokes'))) {
-      localStorage.setItem('jokes', JSON.stringify([newJoke]))
+      status: 200,
+    };
+    if (!JSON.parse(localStorage.getItem("jokes"))) {
+      localStorage.setItem("jokes", JSON.stringify([newJoke]));
     } else {
-      const oldJokesArray = getUserJokes()
-      oldJokesArray.push(newJoke)
-      localStorage.setItem('jokes', JSON.stringify(oldJokesArray))
+      const oldJokesArray = getUserJokes();
+      oldJokesArray.push(newJoke);
+      localStorage.setItem("jokes", JSON.stringify(oldJokesArray));
     }
-    this.clearInputs()
-  }
+    this.clearInputs();
+  };
 
   render() {
     return (
       <form className="joke-form" alt="form">
-        <textarea type='text-area' name='input' placeholder="Example: How do you get a squirrel to like you? Act like a nut." value={this.state.input} alt="joke input box" onChange={event => this.handleChange(event)}></textarea>
-        {this.state.input ? <button type="submit" value="Submit" className="form-submit" alt="form submit button" onClick={event => this.makeNewJoke(event)}>Submit</button> : <button type="submit" value="Submit" className="form-submit" disabled alt="form submit button" onClick={event => this.makeNewJoke(event)}>Submit</button>}
+        <textarea
+          type="text-area"
+          name="input"
+          placeholder="Example: How do you get a squirrel to like you? Act like a nut."
+          value={this.state.input}
+          alt="joke input box"
+          onChange={(event) => this.handleChange(event)}
+        ></textarea>
+        {this.state.input ? (
+          <button
+            type="submit"
+            value="Submit"
+            className="form-submit"
+            alt="form submit button"
+            onClick={(event) => this.makeNewJoke(event)}
+          >
+            Submit
+          </button>
+        ) : (
+          <button
+            type="submit"
+            value="Submit"
+            className="form-submit"
+            disabled
+            alt="form submit button"
+            onClick={(event) => this.makeNewJoke(event)}
+          >
+            Submit
+          </button>
+        )}
       </form>
-    )
+    );
   }
 
   componentDidMount() {
-    this.props.homeButtonDisplayUpdater(true)
+    this.props.homeButtonDisplayUpdater(true);
   }
 }
 
