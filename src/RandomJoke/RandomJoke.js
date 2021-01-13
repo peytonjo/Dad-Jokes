@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import "./RandomJoke.scss";
 
 class RandomJoke extends Component {
@@ -50,3 +51,9 @@ class RandomJoke extends Component {
 }
 
 export default RandomJoke;
+
+RandomJoke.propTypes = {
+  loadNewJoke: PropTypes.func,
+  homeButtonDisplayUpdater: PropTypes.func,
+  joke: PropTypes.string
+}

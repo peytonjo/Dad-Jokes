@@ -1,5 +1,6 @@
 import userIcon from "../user.png";
 import "./NavBar.scss";
+import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
 const NavBar = (props) => {
@@ -34,3 +35,7 @@ const NavBar = (props) => {
 };
 
 export { NavBar };
+
+NavBar.propTypes = {
+  displayHomeButton: PropTypes.bool
+}

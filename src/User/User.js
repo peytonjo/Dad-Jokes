@@ -2,6 +2,7 @@ import React from "react";
 import { Component } from "react";
 import { getFavoriteJokes, getUserJokes } from "../localStorage";
 import CreatedCard from "../CreatedCard/CreatedCard";
+import PropTypes from "prop-types";
 import "./User.scss";
 
 class User extends Component {
@@ -42,3 +43,7 @@ class User extends Component {
 }
 
 export default User;
+
+User.propTypes = {
+  homeButtonDisplayUpdater: PropTypes.func
+}
